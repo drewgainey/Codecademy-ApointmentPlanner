@@ -1,0 +1,40 @@
+import { React, useState } from "react"
+import { ContactForm } from "../../components/contactForm/ContactForm";
+import { TileList } from "../../components/tileList/TileList";
+
+export const ContactsPage = () => {
+  /*
+  Define state variables for 
+  contact info and duplicate check
+  */
+  const [name, setName] = useState('Drew');
+  const [phone, setPhone] = useState('937-361-1794');
+  const [email, setEmail] = useState('drewgainey@gmail.com');
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    /*
+    Add contact info and clear data
+    if the contact name is not a duplicate
+    */
+  };
+
+  /*
+  Using hooks, check for contact name in the 
+  contacts array variable in props
+  */
+
+  return (
+    <div>
+      <section>
+        <h2>Add Contact</h2> 
+        <ContactForm />
+      </section>
+      <hr />
+      <section>
+        <h2>Contacts</h2>
+        <TileList />
+      </section>
+    </div>
+  );
+};
